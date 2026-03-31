@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('contracts', function (Blueprint $table) {
-            $table->id();
+            $table->id();        
+            $table->date("start_date")->default(now());
+            $table->date("end_date");
+            $table->enum("hire_type",["monthly","daily","yearly","hourly"])->default("monthly");
+            $table->foreignId("designations-id")->constrained("designations")->onDelete("cascade");
+            $table->foreignId("employee-id")->constrained("employees")->onDelete("cascade");
             $table->timestamps();
         });
     }
