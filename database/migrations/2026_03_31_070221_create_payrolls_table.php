@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('payrolls', function (Blueprint $table) {
             $table->id();
+            $table->year("year");
+            $table->unsignedTinyInteger("month");
+            $table->foreignId("school_id")->constrained("schools");
             $table->timestamps();
         });
     }
