@@ -9,6 +9,7 @@ class Salary extends Model
     //
     protected $fillable = [
         "gros_salary",
-        // ""
+        "employee_id",
+        "payroll_id"
     ];
 }
