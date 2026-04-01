@@ -8,6 +8,7 @@ class Designations extends Model
 {
     //
     protected $fillable = [
-        "name"
+        "name",
+        "dep_id"
     ];
 }
