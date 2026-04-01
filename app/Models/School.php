@@ -11,4 +11,7 @@ class School extends Model
         "name",
         "whatsapp_link"
     ];
+    public function users(){
+        return $this->belongsTo(User::class,"schoolusers");
+    }
 }
