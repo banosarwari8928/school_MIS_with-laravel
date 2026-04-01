@@ -8,7 +8,8 @@ class Contract extends Model
 {
     //
     protected $fillable = [
-        "start_date",
-        "hire_type"
+        "end_date",
+        "designations-id",
+        "employee-id"
     ];
 }
