@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\Contract;
+use App\Models\Department;
+use App\Models\Employee;
 use Illuminate\Database\Eloquent\Model;
 
 class Designations extends Model
