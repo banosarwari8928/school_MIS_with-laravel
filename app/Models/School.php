@@ -14,4 +14,10 @@ class School extends Model
     public function users(){
         return $this->belongsTo(User::class,"schoolusers");
     }
+    public function departments(){
+        return $this->hasMany(Department::class);
+    }
+    public function designation(){
+        return $this->through("departments")->has("designation");
+    }
 }
