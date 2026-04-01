@@ -10,6 +10,7 @@ class Payroll extends Model
     protected $fillable = [
         "year",
         "month",
+        "school_id"
         
     ];
 }
