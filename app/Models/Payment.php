@@ -8,7 +8,8 @@ class Payment extends Model
 {
     //
     protected $fillable = [
-        "payment_date",
-        "paymet_method"
+        "employee_id",
+        "paymet_method",
+        "payroll_id"
     ];
 }
