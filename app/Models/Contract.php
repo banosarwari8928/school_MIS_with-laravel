@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Designations;
 class Contract extends Model
 {
     //
@@ -12,4 +12,7 @@ class Contract extends Model
         "designations-id",
         "employee-id"
     ];
+     public function designation(){
+        return $this->hasMany(Designations::class);
+    }
 }
