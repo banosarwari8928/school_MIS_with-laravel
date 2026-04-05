@@ -12,5 +12,10 @@ class Payment extends Model
         "paymet_method",
         "payroll_id"
     ];
-    
+     public function employee(){
+        return $this->belongsTo(Employee::class);
+    }
+     public function payroll(){
+        return $this->belongsTo(Payroll::class);
+    }
 }
