@@ -19,7 +19,11 @@ class School extends Model
     public function departments(){
         return $this->hasMany(Department::class);
     }
+    public function payrolls(){
+        return $this->hasMany(Payroll::class);
+    }
     public function designation(){
         return $this->through("departments")->has("designation");
     }
+
 }
