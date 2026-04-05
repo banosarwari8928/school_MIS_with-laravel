@@ -15,7 +15,7 @@ class Department extends Model
     public function designation(){
         return $this->hasMany(Department::class);
     }
-    public function Department(){
+    public function school(){
         return $this->belongsTo(School::class);
     } 
     public function  employees() {

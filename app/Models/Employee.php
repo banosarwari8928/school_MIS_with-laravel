@@ -16,4 +16,12 @@ class Employee extends Model
     public function designation(){
         return $this->hasMany(Designations::class);
     }
+     public function contract(){
+        return $this->hasMany(Contract::class);
+    }
+     public function salaries(){
+        return $this->hasMany(Salary::class);
+    }
+    
+
 }
