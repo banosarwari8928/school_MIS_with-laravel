@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Designations;
+use App\Models\Contract;
+use App\Models\Salary;
+use App\Models\Payment;
 class Employee extends Model
 {
     //
@@ -22,6 +25,8 @@ class Employee extends Model
      public function salaries(){
         return $this->hasMany(Salary::class);
     }
-    
+     public function payment(){
+        return $this->hasMany(Payment::class);
+    }
 
 }
