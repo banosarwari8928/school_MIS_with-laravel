@@ -13,6 +13,10 @@ class Contract extends Model
         "employee-id"
     ];
      public function designation(){
-        return $this->hasMany(Designations::class);
+        return $this->belongsTo(Designations::class);
     }
+     public function employee(){
+        return $this->belongsTo(Employee::class);
+    }
+
 }

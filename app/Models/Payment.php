@@ -12,4 +12,5 @@ class Payment extends Model
         "paymet_method",
         "payroll_id"
     ];
+    
 }
