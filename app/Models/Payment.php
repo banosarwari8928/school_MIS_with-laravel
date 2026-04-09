@@ -3,7 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Employee;
+use App\Models\Payroll;
 class Payment extends Model
 {
     //
