@@ -52,6 +52,9 @@
             @endif
             </div>
         </header>
+        <div class="my-12">
+            <livewire:hero />
+        </div>
         </div>
     </body>
 </html> 
