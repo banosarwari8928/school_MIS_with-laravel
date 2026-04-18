@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
           @vite('resources/js/slider.js')
+          @vite("resources/css/app.css")
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
        
@@ -19,14 +20,14 @@
     </head>
     <body>
         
-        <div class="bg-bg min-h-screen w-full relative">
-              <header class="w-full bg-transparent after:content[''] backdrop-blur-md after:bottom-0 after:right-0 after:w-full after:h-px after-z-50 after:bg-black grid grid-cols-2 items h-fit   center gap-2 fixed top-0 left-0 py-4 lg:grid-cols-2 ">
+        <div class="bg-bg min-h-screen w-full items-center relative">
+              <header class="w-full bg-transparent flex justify-between items-centerpy-4 px-8 fixed top-0 left-0 after:content[''] after:absolute after:bottom-0 after:right-0 after:w-full after:h-px after:z-50 after:bg-black backdrop-blur-xl       ">
                 <div class="flex lg:justify-start m-4 lg:col-start-2">
-                    <h1>Logo</h1>
+                    <h1 class="justify-center items-center mb-1 ">Logo</h1>
                 </div>
                 <div>
             @if (Route::has('login'))
-                <nav class="flex items-center justify-end gap-4">
+                <nav class="flex items-center text-center *: justify-end gap-4">
                     @auth
                         <a
                             href="{{ url('/dashboard') }}"
@@ -37,7 +38,7 @@
                     @else
                         <a
                             href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
+                            class="inline-block px-5 mt-2 py-2 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
                         >
                             Log in
                         </a>
@@ -45,7 +46,7 @@
                         @if (Route::has('register'))
                             <a
                                 href="{{ route('register') }}"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
+                                class="inline-block px-5 py-2 mt-1 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
                                 Register
                             </a>
                         @endif
@@ -54,10 +55,11 @@
             @endif
             </div>
         </header>
-        <div class="mt-16">
+        <div class="">
             <livewire:hero />
             <livewire:feature/>
             <livewire:team/>
+            <livewire:f-q/>
         </div>
         </div>
     </body>

@@ -8,7 +8,7 @@ new class extends Component
 };
 ?>
 
-<div class="max-w-6xl w-full h-64 mx-auto ">
+<div class="max-w-6xl w-full h-64 mx-auto mt-14">
     <img id="image" src="images/banner-1.jpg" class="w-full h-full object-cover">
     {{-- The whole future lies in uncertainty: live immediately. - Seneca --}}
 </div>
