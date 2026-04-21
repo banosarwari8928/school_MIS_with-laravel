@@ -6,9 +6,13 @@ use Livewire\Volt\Volt;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
-
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::view('dashboard', 'dashboard')->name('dashboard');
+});
+Route::view('profile','profile')->middleware(['auth'])->name('profile');
 
     Route::prefix("dashboard")->middleware(['auth', 'verified'])->group(function(){
+        Route::view('dashboard', 'dashboard')->name('dashboard');
         Route::view("/emplyee","livewire.employee.index");
         Route::view("/contract","liverwire.contract.index");
         Route::view("/school","liverwire.school.index");
@@ -17,8 +21,8 @@ Route::get('/', function () {
         Route::view("/salary","liverwire.salary.index");
         Route::view("/payment","liverwire.payment.index");
         Route::view("/payroll","liverwire.payroll.index");
-        Route::view('/','dashboard');
-        Route::view('/profile','profile');
+        // Route::view('/','dashboard');
+        // Route::view('/profile','profile');
     });
 // Route::middleware(['auth'])->group(function () {
 //     Route::redirect('settings', 'settings/profile');
