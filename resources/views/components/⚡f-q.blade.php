@@ -4,16 +4,35 @@ use Livewire\Component;
 
 new class extends Component
 {
-    public $questions = [
-    ["What is our school name?", "answer", false],
-    ["How many teachers do we have?", "answer", false],
-    ["What technics do we use?", "answer", false],
-];
-    //
-   public function handleQ(){
-    $this->questions[0] = !$this->questions[0];
-}
+    public $faq = [
+            [
+               "Q"=> "Lorem ipsum dolor sit amet consectetur adipisicing elit ?",
+               "A"=> "Lorem ipsum dolor sit amet consectetur adipisicing ."
+            ],
+            [
+               "Q"=> "Lorem ipsum dolor sit amet consectetur adipisicing elit ?",
+               "A"=> "Lorem ipsum dolor sit amet consectetur adipisicing ."
+            ],
+            [
+               "Q"=> "Lorem ipsum dolor sit amet consectetur adipisicing elit ?",
+               "A"=> "Lorem ipsum dolor sit amet consectetur adipisicing ."
+            ],
+            [
+               "Q"=> "Lorem ipsum dolor sit amet consectetur adipisicing elit ?",
+               "A"=> "Lorem ipsum dolor sit amet consectetur adipisicing ."
+            ],
+        ];
 
+        public $Qindex = null;
+
+        public function toggle($index){
+            if($this->Qindex === $index){
+                $this->Qindex = null;
+            }
+            else{
+                $this->Qindex = $index;
+            }
+        }
 };
 ?>
 

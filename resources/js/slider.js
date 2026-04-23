@@ -1,7 +1,7 @@
 const image= document.getElementById('image') ;
 const imagels=[
-    "images/banner-1.jpg",
-    "images/banner-2.jpg",
+    "images/banners3.jpg",
+    "images/banners2.jpg",
 ];
 let index=0;
 setInterval(()=>{

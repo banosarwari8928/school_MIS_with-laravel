@@ -59,7 +59,7 @@
             <livewire:hero />
             <livewire:feature/>
             <livewire:team/>
-            <livewire:f-q/>
+            <livewire:fq/>
         </div>
         </div>
     </body>
