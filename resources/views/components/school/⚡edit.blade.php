@@ -1,13 +1,22 @@
 <?php
 
+use App\Models\School;
+use Illuminate\Support\Facades\Request;
 use Livewire\Component;
 
 new class extends Component
 {
     //
+     public function mount(){
+       $school = new School();
+    }
+     public $id;
+     public function update(Request $request, string $id){
+       $this->id = $id;
+    }
 };
 ?>
 
 <div>
-    {{-- People find pleasure in different ways. I find it in keeping my mind clear. - Marcus Aurelius --}}
+    {{-- Simplicity is the ultimate sophistication. - Leonardo da Vinci --}}
 </div>
