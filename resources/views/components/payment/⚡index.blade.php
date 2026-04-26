@@ -1,10 +1,15 @@
 <?php
 
+use App\Models\Payment;
 use Livewire\Component;
 
 new class extends Component
 {
     //
+     public $payment;
+    public function mount(){
+        $this->payment = Payment::all();
+    }
 };
 ?>
 
