@@ -1,10 +1,15 @@
 <?php
 
+use App\Models\Designations;
 use Livewire\Component;
 
 new class extends Component
 {
     //
+    public $designation;
+    public function mount(){
+        $this->designation = Designations::all();
+    }
 };
 ?>
 
