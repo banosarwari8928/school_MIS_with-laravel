@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Salary;
+use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Support\Facades\Request;
 use Livewire\Component;
 
@@ -13,7 +14,7 @@ new class extends Component
        $salary = new Salary();
     }
     
-    public function create(Request $request){
+    public function create(HttpRequest $request){
        $request->validate([
         'gross_salary'=>'required|integer',
         'employee_id'=>'required|integer',

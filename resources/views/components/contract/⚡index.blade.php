@@ -1,10 +1,15 @@
 <?php
 
+use App\Models\Contract;
 use Livewire\Component;
 
 new class extends Component
 {
     //
+     public $cantract ;
+    public function mount(){
+        $this->cantract  = Contract::all();
+    }
 };
 ?>
 
