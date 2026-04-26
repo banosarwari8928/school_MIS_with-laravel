@@ -5,6 +5,20 @@ use Livewire\Component;
 new class extends Component
 {
     //
+     public $department;
+    public function mount(){
+        $this->department = new departmint();
+    }
+    public function create(Request $request){
+        $request->validate([
+              "name"=> "required|string|min:5",
+        "school_id"=> "required|integer"
+        ]);
+        $this->department->create([
+              "name"=> $request->name,
+        "school_id"=> $request->school_id
+        ]);
+    }
 };
 ?>
 
