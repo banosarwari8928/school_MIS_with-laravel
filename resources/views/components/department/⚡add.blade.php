@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Department;
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 new class extends Component
@@ -7,7 +9,7 @@ new class extends Component
     //
      public $department;
     public function mount(){
-        $this->department = new departmint();
+        $this->department = new Department();
     }
     public function create(Request $request){
         $request->validate([
