@@ -14,20 +14,20 @@ new class extends Component
      public function Create(Request $request){
         $request->validate([
         "firstName" => "required|string|min:4",
-        "LastName"=> "required|string|min:6",
+        "lastName"=> "required|string|min:6",
         "tazkira"=> "required|integer",
         "email" => "required|string",
         "phone"=> "nullable|string|max:10",
-        "designation_id"=> "required|integer"
+        "designations_id"=> "required|integer"
         ]);
         $this->employee->Create([
         "firstName"=>$request->firstName,
-        "LastName"=> $request->lastName,
-        "tazkera"=> $request->tazkera,
+        "lastName"=> $request->lastName,
+        "tazkira"=> $request->tazkira,
         "gender"=> $request->gender,
         "email"=> $request->email,
         "phone" => $request->phone,
-        "designation_id" =>$request->designation_id
+        "designations_id" =>$request->designations_id
         ]);
      }
 };

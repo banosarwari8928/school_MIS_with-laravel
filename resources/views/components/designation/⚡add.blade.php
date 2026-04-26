@@ -14,11 +14,11 @@ new class extends Component
     public function create(Request $request){
         $request->validate([
              "name"=> "required|string|min:3",
-        "department_id"=> "required|integer"
+        "dep_id"=> "required|integer"
         ]);
         $this->Designation->create([
              "name"=> $request->name,
-        "department_id"=> $request->department_id
+        "dep_id"=> $request->dep_id
         ]);
     }
 };

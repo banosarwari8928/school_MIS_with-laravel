@@ -15,13 +15,13 @@ new class extends Component
     }
     public function create(Request $request){
         $request->validate([
-        "payment_mount"=> "required|integer",
-        "emploee_id"=> "required|integer",
+        "payment_date"=> "required|integer",
+        "employee_id"=> "required|integer",
         "payroll_id"=> "required|integer",
         ]);
         $this->payment->create([
-            "payment_mount"=> $request->payment_mount,
-        "emploee_id" => $request->emploee_id,
+        "payment_mount"=> $request->payment_mount,
+        "employee_id" => $request->employee_id,
         "payroll_id"=> $request->payroll_id,
         ]);
     }

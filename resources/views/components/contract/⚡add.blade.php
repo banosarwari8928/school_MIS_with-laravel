@@ -15,15 +15,15 @@ new class extends Component
         $request->validate([
              "start_date"=> "required|date",
         "end_date" =>"required|date",
-        "emploee_id"=> "required|integer",
-        "designation_id"=> "required|integer",
+        "employee-id"=> "required|integer",
+        "designations-id"=> "required|integer",
         "hire_type"=>"nullable|string"
         ]);
         $this->cantract->create([
              "start_date"=> now(),
         "end_date"=> $request->endDate,
-        "emploee_id"=> $request->emploee_id,
-        "designation_id"=> $request->designation_id,
+        "employee_id"=> $request->employee_id,
+        "designations-id"=> $request->designations_id,
         "hire_type" => $request->hire_type
         ]);
     }
