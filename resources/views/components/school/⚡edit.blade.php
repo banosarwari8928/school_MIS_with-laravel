@@ -1,18 +1,19 @@
 <?php
 
 use App\Models\School;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 new class extends Component
 {
     //
-     public function mount(){
-       $school = new School();
+      public $id ;
+    public $schoolInfo ;
+    public function update(Request $request , string $id){
+        $this->id = $id ;
     }
-     public $id;
-     public function update(Request $request, string $id){
-       $this->id = $id;
+    public function mount(){
+        $this->schoolInfo = School::findOrFail($this->id);
     }
 };
 ?>
