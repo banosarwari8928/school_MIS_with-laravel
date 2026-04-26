@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Department;
 use Livewire\Component;
 
 new class extends Component
@@ -7,7 +8,7 @@ new class extends Component
     //
      public $departmint ;
     public function mount(){
-        $this->departmint = departmint::all();
+        $this->departmint = Department::all();
     }
 };
 ?>
