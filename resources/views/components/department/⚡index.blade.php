@@ -5,6 +5,10 @@ use Livewire\Component;
 new class extends Component
 {
     //
+     public $departmint ;
+    public function mount(){
+        $this->departmint = departmint::all();
+    }
 };
 ?>
 
