@@ -1,10 +1,20 @@
 <?php
 
+use App\Models\Department;
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 new class extends Component
 {
     //
+    public $id ;
+    public $departmentData;
+    public function update(Request $request,string $id){
+        $this->id = $id;
+    }
+    public function mount(){
+        $this->departmentData = Department::findOrFail($this->id);
+    }
 };
 ?>
 
