@@ -1,10 +1,15 @@
 <?php
 
+use App\Models\Employee;
 use Livewire\Component;
 
 new class extends Component
 {
     //
+     public $emploeey = null ;
+    public function mount(){
+        $this->emploeey = Employee::all();
+    }
 };
 ?>
 
