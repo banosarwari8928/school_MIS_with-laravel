@@ -1,10 +1,19 @@
 <?php
 
+use App\Models\Designations;
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 new class extends Component
 {
-    //
+    public $id ;
+    public $designationData;
+    public function update(Request $request , string $id){
+        $this->id = $id ;
+    } 
+    public function mount(){
+        $this->designationData = Designations::findOrFail($this->id);
+    }
 };
 ?>
 
