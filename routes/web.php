@@ -63,7 +63,7 @@ Route::middleware(['auth' , 'verified'])->group(function(){
         Route::get('add' )->name('add');
         Route::get('edit');
     });
-    Route::prefix('departmint')->name('departmint')->group(function(){
+    Route::prefix('department')->name('department')->group(function(){
         Route::get('index')->name('index');
         Route::get('add' )->name('add');
         Route::get('edit')->name('edit');
@@ -73,7 +73,7 @@ Route::middleware(['auth' , 'verified'])->group(function(){
         Route::get('add')->name('add');
         Route::get('edit')->name('edit');
     });
-    Route::prefix('emploeey')->name('emploeey')->group(function(){
+    Route::prefix('employee')->name('employee')->group(function(){
         Route::get('add')->name('add');
         Route::get('index')->name('index');
         Route::get('edit')->name('edit');
@@ -100,7 +100,7 @@ Route::prefix('dashboard')->middleware(['auth', 'verified'])->group(function(){
     Route::view("cantract" , 'livewire.cantract.index');
     Route::view('department' , 'livewire.dapartment.index');
     Route::view('designation' , 'livewire.designation.index');
-    Route::view('employee' , 'livewire.emploee.index');
+    Route::view('employee' , 'livewire.employee.index');
     Route::view('payment' , 'livewire.payment.index');
     Route::view('payroll' , 'livewire.payroll.index');
     Route::view('school' , 'livewire.school.index');

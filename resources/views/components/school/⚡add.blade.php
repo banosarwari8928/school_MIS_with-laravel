@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\School;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 new class extends Component
