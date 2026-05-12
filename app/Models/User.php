@@ -34,9 +34,6 @@ class User extends Authenticatable // implements MustVerifyEmail
         'remember_token',
     ];
 
-    public function school(){
-        return $this->hasMany(School::class);
-    }
     /**
      * Get the attributes that should be cast.
      *
@@ -48,6 +45,16 @@ class User extends Authenticatable // implements MustVerifyEmail
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function student(){
+        return $this->hasOne(Student::class);
+    }
+    public function Teacher(){
+        return $this->hasOne(Teacher::class);
+    }
+    public function admin(){
+        return $this->hasOne(Admin::class);
     }
 
     /**

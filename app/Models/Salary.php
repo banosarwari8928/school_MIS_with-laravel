@@ -6,16 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Salary extends Model
 {
-    //
     protected $fillable = [
-        "gros_salary",
-        "employee_id",
-        "payroll_id"
+        "year",
+        "month",
+        "day",
+        "amount",
+        "teacher_id"
     ];
-     public function employee(){
-        return $this->belongsTo(Employee::class);
-    }
-     public function payroll(){
-        return $this->belongsTo(Payroll::class);
+
+    public function teacher(){
+        return $this->belongsTo(Teacher::class);
     }
 }

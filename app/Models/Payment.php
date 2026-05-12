@@ -3,20 +3,20 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Employee;
-use App\Models\Payroll;
+
 class Payment extends Model
 {
-    //
     protected $fillable = [
-        "employee_id",
-        "paymet_method",
-        "payroll_id"
+        "amount",
+        "student_id",
+        "sinf_id"
     ];
-     public function employee(){
-        return $this->belongsTo(Employee::class);
+
+    public function student(){
+        return $this->belongsTo(Student::class);
     }
-     public function payroll(){
-        return $this->belongsTo(Payroll::class);
+
+    public function sinf(){
+        return $this->belongsTo(Sinf::class);
     }
 }
